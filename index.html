@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lovas Lakejer – Coverband för bröllop, fester & företagsevent</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#121923;
+      --text:#e6eef6;
+      --muted:#9fb3c8;
+      --accent:#9AE6B4;
+      --accent2:#B794F4;
+      --link:#8ab4f8;
+      --border:#1f2937;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+    a{color:var(--link);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:32px 20px}
+    header{position:sticky;top:0;background:rgba(11,15,20,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    nav{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand .dot{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent2),var(--accent))}
+    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#0b0f14}
+    .btn:active{transform:translateY(1px)}
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25;filter:saturate(110%) blur(1px)}
+    .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .glass{position:relative;background:rgba(18,25,35,.7);border:1px solid var(--border);border-radius:16px;padding:24px}
+    .section-title h2{margin:0 0 10px;font-size:26px}
+    .grid.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+    .grid.gallery img{width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:#000}
+    /* 1-7-4 responsive layout */
+    .grid.gallery img:nth-child(1){grid-column:span 12}
+    .grid.gallery img:nth-child(2){grid-column:span 8}
+    .grid.gallery img:nth-child(3){grid-column:span 4}
+    @media(min-width:860px){
+      .grid.gallery img:nth-child(1){grid-column:span 6}
+      .grid.gallery img:nth-child(2){grid-column:span 3}
+      .grid.gallery img:nth-child(3){grid-column:span 3}
+    }
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px}
+    footer{border-top:1px solid var(--border);color:var(--muted)}
+    .cookie{position:fixed;right:16px;bottom:16px;max-width:380px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start}
+    .cookie button{margin-left:auto}
+    small, .muted{color:var(--muted)}
+  </style>
+  <script>
+    function acceptCookies(){document.querySelector('.cookie').remove();localStorage.setItem('lol_cookies','1')}
+    document.addEventListener('DOMContentLoaded',()=>{ if(localStorage.getItem('lol_cookies')==='1'){ const el=document.querySelector('.cookie'); if(el) el.remove(); } });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="dot"></span>Lovas Lakejer</div>
+        <div class="nav-links">
+          <a href="#om">Om bandet</a>
+          <a href="#galleri">Galleri</a>
+          <a href="#video">Video</a>
+          <a href="#priser">Priser</a>
+          <a class="btn" href="#kontakt">Boka oss</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img class="hero-bg" src="img/hero-collage.jpg" alt="Lovas Lakejer hero">
+    <div class="container hero-inner">
+      <div class="glass">
+        <h1>Lovas Lakejer</h1>
+        <p>Rock & pop–hits från 70‑talet till idag – från Creedence och ABBA till Miley Cyrus och Robyn. Perfekt för bröllop, födelsedagar och firmafester.</p>
+        <a class="btn" href="#kontakt">Skicka bokningsförfrågan</a>
+        <p class="muted" style="margin-top:6px"><small>Tips: lägg din kollage‑bild som <code>img/hero-collage.jpg</code> för att byta header‑bilden.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="om" class="container">
+    <div class="section-title"><h2>Om bandet</h2></div>
+    <p>Vi är fem musiker på sång, trummor, bas, gitarr och keyboard. Vår repertoar sträcker sig från klassiker som “I Will Survive” till moderna favoriter som “Flowers” och “Dancing on My Own”. Lovas Lakejer ser till att festen aldrig tappar fart!</p>
+  </section>
+
+  <section id="galleri" class="container">
+    <div class="section-title"><h2>Galleri</h2></div>
+    <div class="grid gallery">
+      <img src="img/bandet-framifran.jpg" alt="Lovas Lakejer – bandet framifrån">
+      <img src="img/lol-bredsjon.jpg" alt="Lovas Lakejer – Bredsjön">
+      <img src="img/lol-logga.jpg" alt="Lovas Lakejer – logotyp">
+    </div>
+  </section>
+
+  <section id="video" class="container">
+    <div class="section-title"><h2>Video</h2></div>
+    <div class="cards">
+      <div class="card">
+        <div class="muted">Lägg in en YouTube‑länk så här:</div>
+        <div style="aspect-ratio:16/9;background:#000;border-radius:10px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:#667b8c">YouTube‑embed här</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="priser" class="container">
+    <div class="section-title"><h2>Priser & paket</h2></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Bröllopspaket</h3>
+        <p>Perfekt för bröllopsfesten – inklusive ljud och ljus. Vi anpassar spellistan och kan spela första dansen.</p>
+        <strong>Pris från 8&nbsp;000 kr</strong>
+      </div>
+      <div class="card">
+        <h3>Firmafestpaket</h3>
+        <p>Låt stämningen på företaget lyfta! Mer energi, utrustning och erfarenhet.</p>
+        <strong>Pris från 8&nbsp;000 kr</strong>
+      </div>
+      <div class="card">
+        <h3>Privatfest</h3>
+        <p>För födelsedagar, jubileum eller andra festliga tillfällen. Musik för alla åldrar!</p>
+        <strong>Pris från 8&nbsp;000 kr</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="container">
+    <div class="section-title"><h2>Kontakt & bokning</h2></div>
+    <div class="cards">
+      <div class="card">
+        <p>Skicka ett mail med datum, plats och ungefärligt upplägg så återkommer vi snabbt.</p>
+        <p><strong>E‑post:</strong> <a href="mailto:bokning@lovaslakejer.se">bokning@lovaslakejer.se</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="y"></span> Lovas Lakejer. Alla rättigheter förbehållna.</p>
+      <p class="muted"><small>Denna webbplats använder cookies för att förbättra upplevelsen.</small></p>
+    </div>
+  </footer>
+
+  <div class="cookie">
+    <div>Denna webbplats använder cookies för att förbättra upplevelsen. Genom att fortsätta godkänner du användningen av cookies.</div>
+    <button class="btn" onclick="acceptCookies()">Jag förstår</button>
+  </div>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
